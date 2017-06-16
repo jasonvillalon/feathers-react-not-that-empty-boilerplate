@@ -1,0 +1,8 @@
+{
+  "javascript": {
+    "main": "bundle.js",
+    "user": "1.bundle.js"
+  },
+  "styles": {},
+  "assets": {}
+}
