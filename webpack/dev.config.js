@@ -6,7 +6,7 @@ const path = require('path');
 const webpack = require('webpack');
 const helpers = require('./helpers');
 
-const assetsPath = path.resolve(__dirname, '../public/dist');
+const assetsPath = path.resolve(__dirname, '../public');
 const host = (process.env.HOST || 'localhost');
 const port = (+process.env.PORT + 1) || 3001;
 
@@ -48,7 +48,8 @@ const webpackConfig = module.exports = {
   context: path.resolve(__dirname, '..'),
   entry: {
     main: [
-      // `webpack-hot-middleware/client?path=http://${host}:${port}/__webpack_hmr`,
+      'eventsource-polyfill',
+      `webpack-hot-middleware/client?path=http://${host}:${3001}/__webpack_hmr`,
       'react-hot-loader/patch',
       // 'bootstrap-loader',
       // 'font-awesome-webpack!./client/theme/font-awesome.config.js',
@@ -59,7 +60,7 @@ const webpackConfig = module.exports = {
     path: assetsPath,
     // filename: '[name]-[hash].js',
     // chunkFilename: '[name]-[chunkhash].js',
-    // publicPath: `http://${host}:${port}/dist/`,
+    publicPath: `http://${host}:${port}/`,
     // path: path.join(__dirname, './public/dist'),
     filename: 'bundle.js',
   },

@@ -28,7 +28,6 @@ if (nodeEnv === 'production') {
 }
 
 // Sign in with the JWT currently in localStorage
-console.log('JWT: ', localStorage['feathers-jwt']);
 if (localStorage['feathers-jwt']) {
   store.dispatch(feathersAuthentication.authenticate())
     .catch((err) => {

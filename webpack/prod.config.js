@@ -1,5 +1,19 @@
 /* global: [require] */
 // require('babel-polyfill');
+global.__CLIENT__ = false;
+global.__SERVER__ = true;
+global.__DISABLE_SSR__ = false;  // <----- DISABLES SERVER SIDE RENDERING FOR ERROR DEBUGGING
+global.__DEVELOPMENT__ = process.env.NODE_ENV !== 'production';
+global.__DLLS__ = process.env.WEBPACK_DLLS === '1';
+
+if (__DEVELOPMENT__) {
+  if (!require('piping')({
+    hook: true,
+    ignore: /(\/\.|~$|\.json|\.scss$)/i
+  })) {
+    return;
+  }
+}
 
 // Webpack config for creating the production bundle.
 const config = require('config');
@@ -181,11 +195,11 @@ module.exports = {
     new webpack.IgnorePlugin(/\.\/dev/, /\/config$/),
 
     // optimizations
-    new webpack.optimize.UglifyJsPlugin({
-      compress: {
-        warnings: false,
-      },
-    }),
+    // new webpack.optimize.UglifyJsPlugin({
+    //   compress: {
+    //     warnings: false,
+    //   },
+    // }),
 
     webpackIsomorphicToolsPlugin,
 
@@ -195,7 +209,7 @@ module.exports = {
     }),
 
     new SWPrecacheWebpackPlugin({
-      cacheId: 'react-redux-universal-hot-example',
+      cacheId: 'closetph',
       filename: 'service-worker.js',
       maximumFileSizeToCacheInBytes: 8388608,
 

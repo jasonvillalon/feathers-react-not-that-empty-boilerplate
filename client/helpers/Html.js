@@ -84,7 +84,7 @@ export default class Html extends Component {
         </head>
         <body>
           <div
-            id="content"
+            id="root"
             dangerouslySetInnerHTML={{ __html: content }}
           />
           {store &&
@@ -93,7 +93,7 @@ export default class Html extends Component {
             charSet="UTF-8"
           />
             }
-          <script src="/socket.io/socket.io.js"></script>
+          <script src="/socket.io/socket.io.js" />
           {__DLLS__ &&
           <script
             key="dlls__vendor"

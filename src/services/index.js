@@ -6,8 +6,6 @@ const debug = require('debug')('service:index');
 
 const users = require('./users/users.service.js');
 
-const tryHook = require('./hooks/tryHook');
-
 const logger = require('../utils/loggerProduction');
 
 module.exports = function () {

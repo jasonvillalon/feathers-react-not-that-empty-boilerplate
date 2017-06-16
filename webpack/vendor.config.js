@@ -63,21 +63,29 @@ module.exports = {
 
       // </babel-runtime>
 
-      'multireducer',
-      'material-ui',
-      'react',
-      // 'react-bootstrap',
-      'react-dom',
-      'react-helmet',
-      'react-hot-loader',
-      'react-redux',
-      'react-router',
-      // 'react-router-bootstrap',
-      'react-router-redux',
-      'react-router-scroll',
-      'redux',
-      'redux-connect',
-      'redux-form',
+      'feathers-client'
+      'feathers-reduxify-authentication'
+      'feathers-reduxify-services'
+      'is-promise'
+      'js-cookie'
+      'localforage'
+      'react'
+      'react-dom'
+      'react-helmet'
+      'react-redux'
+      'react-router'
+      'react-router-proxy-loader'
+      'react-router-redux'
+      'react-router-scroll'
+      'react-tap-event-plugin'
+      'redux'
+      'redux-auth-wrapper'
+      'redux-connect'
+      'redux-form'
+      'redux-multi'
+      'redux-persist'
+      'redux-promise-middleware'
+      'redux-thunk'
       'serialize-javascript',
       'socket.io-client',
       'superagent',
