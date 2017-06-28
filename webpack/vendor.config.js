@@ -63,29 +63,29 @@ module.exports = {
 
       // </babel-runtime>
 
-      'feathers-client'
-      'feathers-reduxify-authentication'
-      'feathers-reduxify-services'
-      'is-promise'
-      'js-cookie'
-      'localforage'
-      'react'
-      'react-dom'
-      'react-helmet'
-      'react-redux'
-      'react-router'
-      'react-router-proxy-loader'
-      'react-router-redux'
-      'react-router-scroll'
-      'react-tap-event-plugin'
-      'redux'
-      'redux-auth-wrapper'
-      'redux-connect'
-      'redux-form'
-      'redux-multi'
-      'redux-persist'
-      'redux-promise-middleware'
-      'redux-thunk'
+      'feathers-client',
+      'feathers-reduxify-authentication',
+      'feathers-reduxify-services',
+      'is-promise',
+      'js-cookie',
+      'localforage',
+      'react',
+      'react-dom',
+      'react-helmet',
+      'react-redux',
+      'react-router',
+      'react-router-proxy-loader',
+      'react-router-redux',
+      'react-router-scroll',
+      'react-tap-event-plugin',
+      'redux',
+      'redux-auth-wrapper',
+      'redux-connect',
+      'redux-form',
+      'redux-multi',
+      'redux-persist',
+      'redux-promise-middleware',
+      'redux-thunk',
       'serialize-javascript',
       'socket.io-client',
       'superagent',
